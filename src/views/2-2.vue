@@ -54,6 +54,31 @@ export default {
     axios.post("/post", formData).then(res => {
       console.log(res);
     });
+
+    // put请求
+    axios.put('/put', data).then((res)=>{
+      console.log(res)
+    });
+    // patch请求
+    axios.patch('/patch', data).then((res)=>{
+      console.log(res)
+    });
+    // delete请求
+    axios.delete('/delete',{
+      params:{
+        id:12
+      }
+    }).then((res)=>{
+      console.log(res)
+    });
+    axios({
+      method: "delete",
+      url: '/delete',
+      params:{id:12},
+      data:{}
+    }).then(res=>{
+      console.log(res)
+    })
   }
 };
 </script>
