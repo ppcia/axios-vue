@@ -15,6 +15,7 @@ export default {
   name: "axios3-1",
   components: {},
   create() {
+    //实例
       let instance = axios.create({
           baseURL: 'http://localhost:8080',
           timeout: 1000
